@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "530997850918",
+    "project_id": "worldler-authenication",
+    "storage_bucket": "worldler-authenication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530997850918:android:2b72f2189250101c7e87e7",
+        "android_client_info": {
+          "package_name": "com.worldler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530997850918-bakfn3obkpvgcdumh8lekm8ktaoh2e85.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.worldler",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "530997850918-dte722c377l8nhcv6339goik6mohsc5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8UVFK2mcKgPFnnB6wWUEJKcZFZxc6sLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530997850918-dte722c377l8nhcv6339goik6mohsc5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
