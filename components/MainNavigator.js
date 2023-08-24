@@ -10,6 +10,9 @@ import VerificationScreen from '../screens/VerificationScreen';
 import MainContainerBottomTab from './MainContainerBottomTab';
 import GPSLocationScreen from '../screens/GPSLocationScreen';
 import TripDetailsScreen from '../screens/TripDetailsScreen';
+import ForgetPasswordScreen from '../screens/ForgetPasswordScreen';
+import ResetPasswordSuccessScreen from '../screens/ResetPasswordSuccessScreen';
+import MenuScreen from '../screens/MenuScreen';
 // import PickerAvatar from '../draft/PickerAvatar';
 const Stack = createStackNavigator();
 const MainNavigator = props => {
@@ -61,8 +64,23 @@ const MainNavigator = props => {
             options={{header: () => null}}
           />
           <Stack.Screen
+            name="ForgetPwd"
+            component={ForgetPasswordScreen}
+            options={{header: () => null}}
+          />
+          <Stack.Screen
+            name="ResetPwd"
+            component={ResetPasswordSuccessScreen}
+            options={{header: () => null}}
+          />
+          <Stack.Screen
             name="Home"
             component={MainContainerBottomTab}
+            options={{header: () => null}}
+          />
+          <Stack.Screen
+            name="Menu"
+            component={MenuScreen}
             options={{header: () => null}}
           />
           <Stack.Screen

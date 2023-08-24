@@ -14,7 +14,7 @@ import MainHeaderItem from '../itemScreens/MainHeaderItem';
 import MainScreenHeaderItem from '../itemScreens/MainScreenHeaderItem';
 import LocationProcessesItem from '../itemScreens/LocationProcessesItem';
 import {COUNTRY} from '../data/RegionData';
-import {TRIPS} from '../data/PopularTripsData';
+import {TRIPS} from '../data/PopularTripsHomeData';
 import SectionPopularTripRegion from '../itemScreens/SectionPopularTripRegion';
 // import PopularTripListsForRegion from '../itemScreens/PopularTripListsForRegion';
 // import PlayListsItem from '../draft/PlayListsItem';
@@ -37,7 +37,6 @@ const Item = ({item, onPress, textColor, index}) => (
   </View>
 );
 */
-
 function HomeScreen(props) {
   const navigation = useNavigation();
   //  const [selectedId, setSelectedId] = React.useState(1);
@@ -135,8 +134,10 @@ function HomeScreen(props) {
       }}>
       <MainHeaderItem
         LocateCityCheckingIcon={require('../assets/animations/LocateCityChecking.json')}
-        title={'SaiGon,VietNam'}
+        titleCity={'SaiGon 🏙️'}
+        titleCountry={'VietNam 🇻🇳'}
       />
+
       <View style={styles.boxTitle}>
         <MainScreenHeaderItem
           mainTittle={'Welcome'}

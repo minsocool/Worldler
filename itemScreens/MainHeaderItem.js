@@ -1,10 +1,32 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import {icons, colors, images} from '../constants';
 import Lottie from 'lottie-react-native';
 import {useNavigation} from '@react-navigation/native';
-function MainHeaderItem({title, LocateCityCheckingIcon}) {
+import auth from '@react-native-firebase/auth';
+function MainHeaderItem({titleCity, titleCountry, LocateCityCheckingIcon}) {
   const navigation = useNavigation();
+  const onLogOut = () => {
+    auth()
+      .signOut()
+      .then(Response => {
+        navigation.navigate('Logup');
+        console.log(Response);
+        console.log('Signed out');
+      })
+      .catch(error => {
+        console.log(error);
+        Alert.alert('Not able to logout');
+      });
+  };
+
   return (
     <View style={styles.container}>
       {/*}
@@ -13,23 +35,26 @@ function MainHeaderItem({title, LocateCityCheckingIcon}) {
       </TouchableOpacity>
   {*/}
       <TouchableOpacity
-        style={{flexDirection: 'row', alignItems: 'center'}}
-        onPress={() => {}}>
+        onPress={() => {
+          navigation.navigate('Menu');
+        }}>
+        <Image
+          source={require('../assets/icons/menuIcon.png')}
+          style={styles.menuIcon}
+        />
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => {}}>
         <Lottie
           source={LocateCityCheckingIcon}
           autoPlay
           loop={true}
           style={styles.comPassIcon}
         />
-        <Text style={styles.locationTitle}>{title}</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('Setting');
-        }}>
-        <Image source={images.userAvatar} style={styles.userAvatar} />
-      </TouchableOpacity>
+      <Text style={styles.titleCity}>{titleCity}</Text>
+      <Text style={styles.titleCountry}>{titleCountry}</Text>
     </View>
   );
 }
@@ -38,34 +63,37 @@ export default MainHeaderItem;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    height: 70,
+    justifyContent: 'center',
+    height: 60,
   },
-  menuIcon: {
-    width: 25,
-    height: 25,
-  },
-  locationTitle: {
+  titleCity: {
     color: colors.primary,
-    fontFamily: 'Gilroy-Medium',
-    fontSize: 16,
+    fontFamily: 'Gilroy-Regular',
+    fontSize: 13,
     textAlign: 'center',
     position: 'absolute',
-    left: 60,
+    right: 10,
+  },
+  titleCountry: {
+    color: colors.primary,
+    fontFamily: 'Gilroy-Bold',
+    fontSize: 15,
+    textAlign: 'center',
+    position: 'absolute',
+    right: 10,
+    bottom: 5,
   },
   comPassIcon: {
-    width: 70,
-    height: 70,
-    justifyContent: 'flex-start',
+    width: 55,
+    height: 55,
+    top: 3,
   },
-  userAvatar: {
-    width: 50,
-    height: 50,
-    borderRadius: 400 / 2,
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderColor: '#060606',
-    marginRight: 15,
+  menuIcon: {
+    width: 30,
+    height: 30,
+    right: 80,
+    bottom: -20,
+    position: 'absolute',
   },
 });

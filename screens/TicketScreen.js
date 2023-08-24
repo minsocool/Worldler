@@ -10,35 +10,50 @@ import {
 import React from 'react';
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
+import Lottie from 'lottie-react-native';
 import {colors} from '../constants';
-import {BlurView} from '@react-native-community/blur';
 function TicketScreen() {
+  // init ticket flight
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerTicket}>
         <View style={styles.boxTitle}>
           <Text style={styles.tittle}>Where do you {'\n'}want to go ?</Text>
-          <TouchableOpacity onPress={() => {}}>
-            <Image
-              source={require('../assets/images/userAvatar.png')}
-              style={styles.userAvatar}
-            />
-          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.middleTicket}>
+        <Lottie
+          source={require('../assets/animations/bookingFlight.json')}
+          autoPlay
+          loop={true}
+          style={{width: 300, height: 350}}
+        />
+      </View>
+      <View style={styles.footerTicket}>
         <View style={styles.boxFlights}>
           <View style={styles.boxContentFlights}>
-            <Text style={styles.txtFrom}>From</Text>
+            <View style={{flexDirection: 'row'}}>
+              <Image
+                source={require('../assets/icons/takeOffPlane.png')}
+                style={{width: 20, height: 20, marginRight: 5}}
+              />
+              <Text style={styles.txtFrom}>From</Text>
+            </View>
+
             <Text style={styles.placeGo}>Ho Chi Minh</Text>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
               <View
                 style={{
                   height: 1,
                   borderRadius: 1,
                   borderStyle: 'dashed',
                   borderWidth: 0.4,
-                  width: 200,
+                  width: 180,
                 }}
               />
               <TouchableOpacity>
@@ -48,7 +63,14 @@ function TicketScreen() {
                 />
               </TouchableOpacity>
             </View>
-            <Text style={styles.txtTo}>To</Text>
+            <View style={{flexDirection: 'row'}}>
+              <Image
+                source={require('../assets/icons/landingPlane.png')}
+                style={{width: 20, height: 20, marginRight: 5}}
+              />
+              <Text style={styles.txtTo}>To</Text>
+            </View>
+
             <Text style={styles.placeArrive}>HaNoi</Text>
           </View>
         </View>
@@ -70,18 +92,8 @@ function TicketScreen() {
             </TouchableOpacity>
           </View>
           <TouchableOpacity style={styles.btnContinue}>
-            <Text style={styles.txtContinue}>Continue</Text>
+            <Text style={styles.txtContinue}>Search Flights</Text>
           </TouchableOpacity>
-        </View>
-      </View>
-      <View style={styles.footerTicket}>
-        <Image
-          source={require('../assets/images/advertisingSacombank.png')}
-          style={styles.imageAdvertising}
-          resizeMode="cover"
-        />
-        <View style={styles.boxAdvertising}>
-          <Text style={styles.txtAdvertising}>Learn More</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -99,12 +111,12 @@ const styles = StyleSheet.create({
     flex: 20,
   },
   middleTicket: {
-    flex: 40,
+    flex: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },
   footerTicket: {
-    flex: 40,
+    flex: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -117,7 +129,7 @@ const styles = StyleSheet.create({
   },
   tittle: {
     fontFamily: 'Gilroy-Bold',
-    fontSize: 24,
+    fontSize: 30,
     textAlign: 'left',
     color: '#060606',
   },
@@ -143,14 +155,14 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   txtFrom: {
-    fontFamily: 'Gilroy-Medium',
+    fontFamily: 'Gilroy-Regular',
     fontSize: 15,
     fontWeight: '600',
     textAlign: 'left',
     color: '#B4B6BA',
   },
   txtTo: {
-    fontFamily: 'Gilroy-Medium',
+    fontFamily: 'Gilroy-Regular',
     fontWeight: '600',
     fontSize: 15,
     textAlign: 'left',
@@ -169,9 +181,10 @@ const styles = StyleSheet.create({
     color: '#060606',
   },
   exchangeIcon: {
-    width: 35,
-    height: 35,
+    width: 30,
+    height: 30,
     borderRadius: 10,
+    marginLeft: 5,
   },
 
   boxAction: {
@@ -198,7 +211,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '650',
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
   },
   imageAdvertising: {
     width: 250,

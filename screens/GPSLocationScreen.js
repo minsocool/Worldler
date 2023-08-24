@@ -82,7 +82,7 @@ function GPSLocationScreen() {
           pinColor="aqua"
           draggable={true}
           onDragStart={e => {
-            console.log('DragStart', e.nativeEvent);
+            console.log('Drag Start', e.nativeEvent);
           }}
           onDragEnd={e => {
             console.log('Drag End', e.nativeEvent);

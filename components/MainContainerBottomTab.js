@@ -4,7 +4,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import TicketScreen from '../screens/TicketScreen';
 import SearchingScreen from '../screens/SearchingScreen';
-import SettingScreen from '../screens/SettingScreen';
 import {colors} from '../constants/';
 const width = Dimensions.get('window').width;
 const tabs = [
@@ -22,11 +21,6 @@ const tabs = [
     name: 'Search',
     icon: 'Searching',
     screen: SearchingScreen,
-  },
-  {
-    name: 'Setting',
-    icon: 'Setting',
-    screen: SettingScreen,
   },
 ];
 const Tab = createBottomTabNavigator();
@@ -97,9 +91,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 15,
     height: 3,
-    left: width / 4 / 2 - 7,
+    left: width / 3 / 2 - 7,
     bottom: 10,
-    backgroundColor: colors.primary,
+    backgroundColor: '#060606',
     zIndex: 100,
   },
 });

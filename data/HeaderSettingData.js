@@ -1,12 +1,14 @@
+import React from 'react';
+import SettingScreen from '../screens/MenuScreen';
 export const SECTIONS = [
   {
     header: 'General',
     icon: 'settings',
     items: [
-      {icon: 'globe', color: '#1CC7DB', label: 'Language', type: 'link'},
+      {icon: 'globe', color: 'black', label: 'Language', type: 'link'},
       {
         icon: 'bell',
-        color: '#F6B800',
+        color: 'black',
         label: 'Notification Settings',
         value: false,
         type: 'link',
@@ -14,14 +16,14 @@ export const SECTIONS = [
       {
         id: 1,
         icon: 'location-arrow',
-        color: '#32c759',
+        color: 'black',
         label: 'Location',
         type: 'boolean',
       },
       {
         id: 2,
         icon: 'moon',
-        color: 'gray',
+        color: 'black',
         label: 'Dark-Mode',
         type: 'boolean',
       },
@@ -34,18 +36,19 @@ export const SECTIONS = [
       {icon: 'mobile', color: 'black', label: 'Mobile Number', type: 'link'},
       {
         icon: 'lock',
-        color: '#14283c',
+        color: 'black',
         label: 'Privacy & Security',
         value: false,
         type: 'link',
       },
+      {icon: 'sign-out-alt', color: 'black', label: 'Log Out', type: 'link'},
     ],
   },
   {
     header: 'Help',
     icon: 'help-circle',
     items: [
-      {icon: 'flag', color: '#D22B2B', label: 'Report Bug'},
+      {icon: 'flag', color: 'black', label: 'Report Bug'},
       {
         icon: 'headphones',
         color: 'black',
@@ -53,24 +56,25 @@ export const SECTIONS = [
       },
     ],
   },
+
   {
     header: 'Other',
     icon: 'help-circle',
     items: [
       {
         icon: 'shield-alt',
-        color: '#0883FF',
+        color: 'black',
         label: 'Privacy Policy',
       },
       {
         icon: 'flag',
-        color: 'cyan',
+        color: 'black',
         label: 'Terms and Conditions',
       },
-      {icon: 'check-circle', color: 'lime', label: 'Versions'},
+      {icon: 'check-circle', color: 'black', label: 'Versions'},
       {
         icon: 'star',
-        color: 'yellow',
+        color: 'black',
         label: 'Rate Worldler Travel App',
       },
       {

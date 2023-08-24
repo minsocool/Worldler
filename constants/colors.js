@@ -1,5 +1,5 @@
 export default {
-  primary: '#1CC7DB',
+  primary: '#003ECB',
   light: '#fbfbfb',
   dropDown: 'white',
 };

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {TRIPS} from '../data/PopularTripsData';
+import {TRIPS} from '../data/PopularTripsHomeData';
 import TypePlaceItem from './TypePlaceItem';
 import {colors, icons} from '../constants';
 import {Rating, AirbnbRating} from 'react-native-ratings';

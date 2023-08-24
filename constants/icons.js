@@ -8,5 +8,7 @@ export default {
   Searching: require('../assets/icons/searchIcon.png'),
   Setting: require('../assets/icons/settingIcon.png'),
   menuIcon: require('../assets/icons/menuIcon.png'),
-  locationIcon:require('../assets/icons/locationIcon.png')
+  locationIcon: require('../assets/icons/locationIcon.png'),
+  bookmarkIcon: require('../assets/icons/bookMarkIcon.png'),
+  bookmarkedIcon: require('../assets/icons/bookMarkedIcon.png'),
 };

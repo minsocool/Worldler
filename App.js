@@ -2,6 +2,7 @@
 import React from 'react';
 import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 import MainNavigator from './components/MainNavigator';
+import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 function App() {
   return (
     <SafeAreaView

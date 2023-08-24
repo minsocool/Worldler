@@ -66,14 +66,14 @@ function SignUpSuccessScreen(props) {
         </Text>
       </View>
       <View style={styles.buttonViewPlan}>
-        <TouchableOpacity onPress={() => navigation.replace('Home')}>
+        <TouchableOpacity onPress={() => navigation.replace('Logup')}>
           <Text
             style={{
               textAlign: 'center',
               fontFamily: 'Gilroy-Bold',
               color: 'black',
             }}>
-            View My Plans{' '}
+            Go to Login{' '}
           </Text>
         </TouchableOpacity>
       </View>
